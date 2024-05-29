@@ -4,7 +4,7 @@ public class Main {
 	    System.out.println("<h1>ミミックがあらわれた！</h1>");
 	    System.out.println("<p>勇者のこうげき！</p>");
 	    System.out.println("<style> h1{ color: #fb0077; } </style>");
-	    System.out.println("<style> p{ color:red; } </style>");
+	    System.out.println("<style> h1{ color: #fb0077; } </style>");
 	}
 }
 
