@@ -1,82 +1,64 @@
-// if文による条件分岐
+// 	メソッドを作る　
 public class Main {
-	public static void main(String[] args) {
-		int a = 0;
-		if( a == 1){
-			String class_name = "like";
-			System.out.println("<p class=" + class_name + ">好きなら好きなだけ追いかけろ！</p>");
-		}else{
-			String class_name = "hate";
-			System.out.println("<p class=" + class_name + ">嫌いならはっきりと伝えておいてや！</p>");
+	// メインメソッド、これが標準で呼び出される
+	public static void main(String[] args){
+		String greeting = "Hello World!!";
 
-		}
+		System.out.println(greeting);
 
-		System.out.println("<style> p{ font-weight: bold;  } </style>");
-		System.out.println("<style> .like{ color:red; } </style>");
-		System.out.println("<style> .hate{ color:blue; } </style>");
+		// 自作メソッドを呼び出している
+		sayMimic();
+		dragon();
+	}
+
+	// 自作メソッド、メインメソッドに当てはめて使う？
+	public static void sayMimic(){
+		System.out.println("なんと宝箱はミミックだった！");
+
+		// 自作メソッド:dragon、先に書いたメソッドしか呼び出すことができない模様。
+		dragon();
+	}
+
+	// 自作メソッド：dragon　、mimicで呼び出していいる。
+	public static void dragon(){
+		System.out.println("ドラゴンはひのいきを吐いた！");
 	}
 }
 
 // 演習課題1
 public class Main {
 	public static void main(String[] args){
-		int number = (int)(Math.random() * 3 + 1);
-		System.out.println("あなたの順位は" + number + "位です");
-		
-		if( number == 1 ){
-			System.out.println("あなたの順位は" + number + "位です");
-			System.out.println("おめでとう！");
-		}else{
-			System.out.println("あなたの順位は" + number + "位です");
-		}
+		sayHello();
+	}
+
+	public static void sayHello(){
+		System.out.println("hello paiza");
 	}
 }
 
 // 演習課題2
 public class Main {
 	public static void main(String[] args){
-		int rank = (int)(Math.random()* 5 + 1);
-		System.out.println("あなたの順位は" + rank + "位です");
-		System.out.println("おめでとう！");
+		sayHello();
+	}
 
-		if( rank == 1 ){
-			System.out.println("あなたの順位は" + rank + "位です");
-			System.out.println("おめでとう！");
-		}else{
-			System.out.println("あなたの順位は" + rank + "位です");
-			System.out.println("あと少し！");
-			}
+	public static void sayHello() {
+		String text = "hello java";
 
+		System.out.println(text);
 	}
 }
 
 // 演習課題3
-public class Main{
+public class Main {
 	public static void main(String[] args){
-		int number = ((int)(Math.random() * 3 + 1)) * 100;
-
-		if( number == 300) {
-			System.out.println("あなたの得点は" + number + "ポイントです");
-			System.out.println("おめでとう！");
-		}
-		if(number == 100 || number == 200){
-			System.out.println("あなたの得点は" + number + "ポイントです");
-		}
+		sayHello();
 	}
-}
 
-// 演習課題4
-public class Main{
-	public static void main(String[] args){
-		int number = ((int)(Math.random() * 3 + 1)) * 100;
+	public static void sayHello(){
+		String greeting = "hello ";
+		String programing = "paiza";
 
-		if( number == 300 ){
-			System.out.println("あなたの得点は" + number + "ポイントです");
-			System.out.println("おめでとう！");
-		}
-		if( number == 200 || number == 100 ){
-			System.out.println("あなたの得点は" + number + "ポイントです");
-			System.out.println("ざんねん！");
-		}
+		System.out.println(greeting + programing);
 	}
 }
